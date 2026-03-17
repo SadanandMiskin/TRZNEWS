@@ -135,7 +135,10 @@ app.get('/',api,(req,res)=>{
     // console.log(req.session)
     // console.log(req.session.id)
     const {articles} = req
-    res.json(articles)
+    res.json({
+        length: articles.length,
+        articles
+    })
     
 })
 
